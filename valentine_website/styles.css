@@ -1,0 +1,273 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFEAF1;
+    font-family: "Bonbon", sans-serif;
+    color: #ED0256;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    cursor: url('IMAGES/heart.svg'), auto;
+    background-image: url(IMAGES/fleur.gif);
+    background-repeat: no-repeat;
+    background-position: calc(10% + 0px) 0px;
+    background-size: 100% auto;
+    z-index: 0;
+}
+    
+
+
+
+
+
+a {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px ;
+    background-color: white;
+    color: #ED0256; /* Rose */
+    border-radius: 20px; /* Arrondi */
+    text-decoration: none; /* Enlever le soulignement */
+    transition: background-color 0.3s, transform 0.3s; /* Transition fluide */
+}
+
+/* État hover */
+a:hover {
+    background-color: #FF9AD0; /* Rose */
+    color: white; /* Blanc */
+    transform: scale(1.01); /* Léger zoom */
+    cursor: url('IMAGES/arrow.svg'), auto;
+}
+
+
+
+.img__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.img__container img{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 250px;
+}
+
+.img__container:hover{
+    transform: scale(1.05);
+}
+
+.img__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.img__menu img{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    width: 250px;
+}
+
+.img__menu:hover{
+    transform: scale(1.05);
+   
+}
+
+
+.texte__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.texte__container p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.line-break {
+    display: block;
+    margin-bottom: 30px; 
+}
+
+.texte__container .fond {
+    background-color: white;
+    padding: 20px; 
+    border-radius: 20px; 
+    border: 2px solid transparent;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.texte__container .fond:hover {
+    background-color: #ffffff;
+    border-color: #fabfe1;
+    box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+
+
+.rounded-box {
+    border-radius: 20px;
+    padding: 15px; 
+    display: inline-block; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.rounded-box:hover{
+    transform: scale(1.10);
+}
+
+
+.rounded-box:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 183, 229); /* ou toute autre couleur de votre choix */
+    animation: underline 0.5s forwards;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.btn__container {
+    display: flex;
+    justify-content: center; /* Pour centrer les boutons horizontalement */
+}
+
+.button {
+    display: inline-block; /* Afficher les boutons côte à côte */
+    margin: 0 10px; /* Marge entre les boutons */
+}
+
+#noButton {
+    position: absolute;
+}
+
+
+
+.button__page {
+    font-family: "Bonbon", sans-serif;
+    text-align: center;
+    background-color: #FF9AD0;
+    color: #fff;
+    padding: 10px 25px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 24px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button__page:hover {
+    color: #ED0256;
+    background-color: #fff;
+    transform: scale(1.05);
+    cursor: url('IMAGES/arrow.svg'), auto;
+}
+
+
+
+
+
+.footer{
+    color: #FFC0E2;
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+@media (min-width: 1px){
+    .content,
+    .content-index{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+}
+
+
+
+@media (min-width: 500px){
+    .img__container img{
+        width: 300px;
+    }
+
+    .img__menu img{
+        width: 300px;
+    }
+
+    .rounded-box:hover{
+        transform: scale(1.30);
+    }
+    
+}
+
+
+
+
+@media (min-width: 700px){
+    .img__container img{
+        width: 350px;
+    }
+
+    .img__menu img{
+        width: 400px;
+    }
+    .texte__container p {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    .button__page {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (min-width: 1000px){
+    .img__container img{
+        width: 400px;
+    }
+
+    .img__menu img{
+        width: 500px;
+    }
+
+    .texte__container p {
+        font-size: 27px;
+    }
+
+    a {
+        font-size: 27px;
+    }
+
+    .button__page {
+        font-size: 27spx;
+    }
+}
